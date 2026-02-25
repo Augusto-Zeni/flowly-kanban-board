@@ -8,6 +8,7 @@ import {
   DialogTrigger,
 } from '@flowly/components/ui/dialog'
 import { Chromium } from 'lucide-react'
+import { signIn } from 'next-auth/react'
 import Image from 'next/image'
 import secondaryLogo from '../../../public/secondary-logo.svg'
 
@@ -15,6 +16,10 @@ interface LoginModalProps {
   trigger: ReactNode
   open?: boolean
   onOpenChange?: (open: boolean) => void
+}
+
+function handleClickLogin() {
+  signIn('google', { callbackUrl: '/dashboard' })
 }
 
 export default function LoginModal({ trigger, open, onOpenChange }: LoginModalProps) {
@@ -57,6 +62,7 @@ export default function LoginModal({ trigger, open, onOpenChange }: LoginModalPr
             <button
               type="button"
               className="flex items-center justify-center gap-3 w-full border border-border rounded-lg py-3 px-4 text-foreground text-sm font-medium hover:bg-accent transition-colors cursor-pointer"
+              onClick={handleClickLogin}
             >
               <Chromium size={18} />
               Continuar com Google

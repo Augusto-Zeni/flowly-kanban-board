@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import AuthProvider from '@flowly/components/Providers/SessionProvider'
 import { Manrope } from 'next/font/google'
 import './globals.css'
 
@@ -22,7 +23,9 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   )
