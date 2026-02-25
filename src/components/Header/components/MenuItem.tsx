@@ -168,7 +168,7 @@ export default function MenuItem({ id, children, href, isSelected = false }: Men
         <span
           ref={duplicateRef}
           aria-hidden="true"
-          className="absolute top-0 left-0 pointer-events-none"
+          className="absolute top-0 left-0 pointer-events-none font-light"
         >
           {children}
         </span>

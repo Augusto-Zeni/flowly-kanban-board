@@ -20,8 +20,8 @@ export default function Page() {
             style={{ width: '100%', height: '100%' }}
           />
 
-          <div className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center px-7">
-            <h1 className="text-white-primary text-8xl">
+          <div className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-center px-5 md:px-7">
+            <h1 className="text-white-primary text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-tight">
               Onde suas ideias
               {' '}
               <br />
@@ -30,9 +30,9 @@ export default function Page() {
               <span className="text-primary">fluxo</span>
             </h1>
 
-            <hr className="w-1/3 border-t border-white-primary opacity-30 my-7" />
+            <hr className="w-1/2 md:w-1/3 border-t border-white-primary opacity-30 my-5 md:my-7" />
 
-            <h2 className="text-white-primary text-xl font-light">
+            <h2 className="text-white-primary text-base md:text-xl font-light max-w-sm md:max-w-none">
               A maneira mais inteligente de organizar seu fluxo de trabalho.
             </h2>
 
@@ -40,7 +40,7 @@ export default function Page() {
               id="start-free-button"
               variant="primary"
               onClick={handleClickStartFree}
-              className="mt-7 w-fit"
+              className="mt-5 md:mt-7 w-fit"
             >
               Começar Gratuitamente
             </Button>
