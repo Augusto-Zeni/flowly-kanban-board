@@ -1,9 +1,12 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 :root {
   --background: #171719;
   --foreground: #FEFEFE;
   --primary: #9CFF01;
+  --black: #171719;
+  --white: #FEFEFE;
 }
 
 @theme inline {
@@ -11,6 +14,8 @@
   --color-primary: var(--primary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-black-primary: var(--black);
+  --color-white-primary: var(--white);
 
   /* Custom Fonts */
   --font-sans: var(--font-manrope);
