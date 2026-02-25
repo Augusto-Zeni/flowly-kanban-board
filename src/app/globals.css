@@ -7,6 +7,25 @@
   --primary: #9CFF01;
   --black: #171719;
   --white: #FEFEFE;
+
+  /* shadcn/ui variables */
+  --card: 24 24 26;
+  --card-foreground: 254 254 254;
+  --popover: 24 24 26;
+  --popover-foreground: 254 254 254;
+  --primary-foreground: 23 23 25;
+  --secondary: 39 39 42;
+  --secondary-foreground: 254 254 254;
+  --muted: 39 39 42;
+  --muted-foreground: 161 161 170;
+  --accent: 39 39 42;
+  --accent-foreground: 254 254 254;
+  --destructive: 239 68 68;
+  --destructive-foreground: 254 254 254;
+  --border: 39 39 42;
+  --input: 39 39 42;
+  --ring: 156 255 1;
+  --radius: 0.5rem;
 }
 
 @theme inline {
@@ -17,15 +36,27 @@
   --color-black-primary: var(--black);
   --color-white-primary: var(--white);
 
+  /* shadcn/ui color mappings */
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-popover: rgb(var(--popover));
+  --color-popover-foreground: rgb(var(--popover-foreground));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-secondary: rgb(var(--secondary));
+  --color-secondary-foreground: rgb(var(--secondary-foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --color-destructive: rgb(var(--destructive));
+  --color-destructive-foreground: rgb(var(--destructive-foreground));
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-ring: rgb(var(--ring));
+  --radius: var(--radius);
+
   /* Custom Fonts */
   --font-sans: var(--font-manrope);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #171719;
-    --foreground: #FEFEFE;
-  }
 }
 
 body {

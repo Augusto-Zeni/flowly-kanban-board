@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@flowly/components",
+    "utils": "@flowly/lib/utils",
+    "ui": "@flowly/components/ui",
+    "lib": "@flowly/lib",
+    "hooks": "@flowly/hooks"
+  },
+  "iconLibrary": "lucide"
+}

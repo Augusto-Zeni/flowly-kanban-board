@@ -1,6 +1,7 @@
 'use client'
 
 import Button from '@flowly/components/Button/Button'
+import LoginModal from '@flowly/components/Dialog/LoginModal'
 import Header from '@flowly/components/Header/Header'
 import Spline from '@splinetool/react-spline'
 
@@ -36,14 +37,18 @@ export default function Page() {
               A maneira mais inteligente de organizar seu fluxo de trabalho.
             </h2>
 
-            <Button
-              id="start-free-button"
-              variant="primary"
-              onClick={handleClickStartFree}
-              className="mt-5 md:mt-7 w-fit"
-            >
-              Começar Gratuitamente
-            </Button>
+            <LoginModal
+              trigger={(
+                <Button
+                  id="start-free-button"
+                  variant="primary"
+                  onClick={handleClickStartFree}
+                  className="mt-5 md:mt-7 w-fit"
+                >
+                  Começar Gratuitamente
+                </Button>
+              )}
+            />
           </div>
         </div>
       </main>

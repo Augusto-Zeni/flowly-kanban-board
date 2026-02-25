@@ -1,6 +1,7 @@
 'use client'
 
 import Button from '@flowly/components/Button/Button'
+import LoginModal from '@flowly/components/Dialog/LoginModal'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -9,11 +10,6 @@ import MenuItem from './components/MenuItem'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const handleClickStartFree = () => {
-    // eslint-disable-next-line no-console
-    console.log('Start free')
-  }
 
   const toggleMenu = () => setIsMenuOpen(prev => !prev)
   const closeMenu = () => setIsMenuOpen(false)
@@ -43,14 +39,13 @@ export default function Header() {
         </ul>
       </nav>
 
-      <Button
-        id="start-free-button"
-        variant="primary"
-        onClick={handleClickStartFree}
-        className="hidden md:block"
-      >
-        Começar grátis
-      </Button>
+      <LoginModal
+        trigger={(
+          <Button id="start-free-button" variant="primary" className="hidden md:block">
+            Começar grátis
+          </Button>
+        )}
+      />
 
       {/* Hamburger button */}
       <button
@@ -118,17 +113,13 @@ export default function Header() {
           </ul>
         </nav>
 
-        <Button
-          id="start-free-button-mobile"
-          variant="primary"
-          onClick={() => {
-            handleClickStartFree()
-            closeMenu()
-          }}
-          className="w-full"
-        >
-          Começar grátis
-        </Button>
+        <LoginModal
+          trigger={(
+            <Button id="start-free-button-mobile" variant="primary" className="w-full" onClick={closeMenu}>
+              Começar grátis
+            </Button>
+          )}
+        />
       </div>
     </header>
   )
