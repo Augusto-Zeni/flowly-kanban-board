@@ -10,6 +10,8 @@ const eslintConfig = antfu({
     '.next/**',
     'build/**',
     'next-env.d.ts',
+    '*.md',
+    '**/*.md',
   ],
   stylistic: {
     indent: 2,
@@ -18,7 +20,7 @@ const eslintConfig = antfu({
 }, {
   rules: {
     'no-console': 'warn',
-    'style/max-len': ['warn', { code: 120 }],
+    'style/max-len': ['warn', { code: 120, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreUrls: true, ignorePattern: '.*className.*|^\\s+[A-Za-zÀ-ÿ].*[^{};,]$' }],
   },
 })
 
