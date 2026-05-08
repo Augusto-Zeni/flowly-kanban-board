@@ -1,17 +1,18 @@
-# Modal de card — histórico de movimentações
+# Painel de card — tab de histórico (Activities)
 
 ## What to build
 
-Exibir o histórico de movimentações do card no modal (eventos CREATED e MOVED do `CardHistory`). Cada entrada mostra quem fez a ação, de qual coluna veio, para qual foi, e quando.
+Implementar a tab "Activities" do `<TaskDetailPanel />` com o histórico de movimentações do card (eventos CREATED e MOVED do `CardHistory`). Cada entrada mostra avatar, quem fez a ação, o que aconteceu e quando.
 
 ## Acceptance criteria
 
-- [ ] Modal exibe o histórico de eventos CREATED e MOVED em ordem cronológica
-- [ ] Evento CREATED exibe: "Criado por [nome] em [data]"
-- [ ] Evento MOVED exibe: "[nome] moveu de [coluna origem] para [coluna destino] em [data]"
-- [ ] Avatar do usuário exibido em cada entrada
+- [ ] Tab "Activities" acessível no `<TaskDetailPanel />`
+- [ ] Histórico exibido em ordem cronológica (mais recente por último)
+- [ ] Evento CREATED exibe: `<Avatar />` + "Criado por [nome] em [data]"
+- [ ] Evento MOVED exibe: `<Avatar />` + "[nome] moveu de [coluna origem] para [coluna destino] em [data]"
+- [ ] Nomes das colunas resolvidos no momento da exibição (não apenas IDs)
 - [ ] Histórico visível para todos os membros ACTIVE (incluindo VIEWER)
-- [ ] Nomes das colunas são resolvidos no momento da exibição (não apenas IDs)
+- [ ] Timestamp relativo (ex: "há 3 dias") com tooltip de data absoluta ao hover
 
 ## Blocked by
 
