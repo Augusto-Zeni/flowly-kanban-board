@@ -2,6 +2,7 @@
 
 import Button from '@flowly/components/Button/Button'
 import LoginModal from '@flowly/components/Dialog/LoginModal'
+import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -10,6 +11,7 @@ import MenuItem from './components/MenuItem'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { data: session } = useSession()
 
   const toggleMenu = () => setIsMenuOpen(prev => !prev)
   const closeMenu = () => setIsMenuOpen(false)
@@ -39,13 +41,23 @@ export default function Header() {
         </ul>
       </nav>
 
-      <LoginModal
-        trigger={(
-          <Button id="start-free-button" variant="primary" className="hidden md:block">
-            Começar grátis
-          </Button>
-        )}
-      />
+      {session
+        ? (
+            <Link href="/dashboard">
+              <Button id="start-free-button" variant="primary" className="hidden md:block">
+                Acessar meus quadros
+              </Button>
+            </Link>
+          )
+        : (
+            <LoginModal
+              trigger={(
+                <Button id="start-free-button" variant="primary" className="hidden md:block">
+                  Começar grátis
+                </Button>
+              )}
+            />
+          )}
 
       {/* Hamburger button */}
       <button
@@ -113,13 +125,23 @@ export default function Header() {
           </ul>
         </nav>
 
-        <LoginModal
-          trigger={(
-            <Button id="start-free-button-mobile" variant="primary" className="w-full" onClick={closeMenu}>
-              Começar grátis
-            </Button>
-          )}
-        />
+        {session
+          ? (
+              <Link href="/dashboard" onClick={closeMenu}>
+                <Button id="start-free-button-mobile" variant="primary" className="w-full">
+                  Acessar meus quadros
+                </Button>
+              </Link>
+            )
+          : (
+              <LoginModal
+                trigger={(
+                  <Button id="start-free-button-mobile" variant="primary" className="w-full" onClick={closeMenu}>
+                    Começar grátis
+                  </Button>
+                )}
+              />
+            )}
       </div>
     </header>
   )

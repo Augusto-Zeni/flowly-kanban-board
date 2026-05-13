@@ -4,6 +4,8 @@ import Button from '@flowly/components/Button/Button'
 import LoginModal from '@flowly/components/Dialog/LoginModal'
 import Header from '@flowly/components/Header/Header'
 import HeroAnimation from '@flowly/components/HeroAnimation/HeroAnimation'
+import { useSession } from 'next-auth/react'
+import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 const features = [
@@ -87,6 +89,7 @@ const stats = [
 ]
 
 export default function Page() {
+  const { data: session } = useSession()
   const heroTextRef = useRef<HTMLDivElement>(null)
   const featuresRef = useRef<HTMLDivElement>(null)
   const statsRef = useRef<HTMLDivElement>(null)
@@ -222,17 +225,27 @@ export default function Page() {
 
           {/* CTA */}
           <div className="hero-animate flex flex-wrap items-center gap-4 mt-8 md:mt-10">
-            <LoginModal
-              trigger={(
-                <Button
-                  id="start-free-button"
-                  variant="primary"
-                  className="text-sm"
-                >
-                  Começar Gratuitamente
-                </Button>
-              )}
-            />
+            {session
+              ? (
+                  <Link href="/dashboard">
+                    <Button id="start-free-button" variant="primary" className="text-sm">
+                      Acessar meus quadros
+                    </Button>
+                  </Link>
+                )
+              : (
+                  <LoginModal
+                    trigger={(
+                      <Button
+                        id="start-free-button"
+                        variant="primary"
+                        className="text-sm"
+                      >
+                        Começar Gratuitamente
+                      </Button>
+                    )}
+                  />
+                )}
             <button
               type="button"
               className="flex items-center gap-2 text-sm font-medium cursor-pointer group"
@@ -572,17 +585,27 @@ export default function Page() {
           >
             Crie sua conta gratuitamente e comece a organizar seu fluxo de trabalho com clareza.
           </p>
-          <LoginModal
-            trigger={(
-              <Button
-                id="cta-start-free"
-                variant="primary"
-                className="text-base px-10 py-3"
-              >
-                Começar Gratuitamente
-              </Button>
-            )}
-          />
+          {session
+            ? (
+                <Link href="/dashboard">
+                  <Button id="cta-start-free" variant="primary" className="text-base px-10 py-3">
+                    Acessar meus quadros
+                  </Button>
+                </Link>
+              )
+            : (
+                <LoginModal
+                  trigger={(
+                    <Button
+                      id="cta-start-free"
+                      variant="primary"
+                      className="text-base px-10 py-3"
+                    >
+                      Começar Gratuitamente
+                    </Button>
+                  )}
+                />
+              )}
           <p className="mt-4 text-xs" style={{ color: 'rgba(254,254,254,0.2)' }}>
             Sem cartão de crédito · Setup em 2 minutos
           </p>
