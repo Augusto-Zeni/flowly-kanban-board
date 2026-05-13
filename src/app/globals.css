@@ -8,22 +8,50 @@
   --black: #171719;
   --white: #FEFEFE;
 
+  /* Design system tokens */
+  --bg-base: #171719;
+  --bg-sidebar: #141416;
+  --bg-card: #1a1a1c;
+  --bg-panel: #1a1a1c;
+  --bg-column: #1c1c1e;
+  --border-color: rgba(156,255,1,0.08);
+  --border-hover: rgba(156,255,1,0.16);
+  --text-primary: #FEFEFE;
+  --text-secondary: rgba(254,254,254,0.45);
+  --text-muted: rgba(254,254,254,0.2);
+  --accent-yellow: #9CFF01;
+
+  /* Tags */
+  --tag-design: #3b4fd8;
+  --tag-art: #e07b39;
+  --tag-web: #3dba6e;
+
+  /* Priorities */
+  --priority-high: #e05252;
+  --priority-medium: #e09a3b;
+  --priority-low: #3dba6e;
+
+  /* Column statuses */
+  --status-todo: #555555;
+  --status-progress: #e09a3b;
+  --status-review: #3b9de0;
+
   /* shadcn/ui variables */
-  --card: 24 24 26;
+  --card: 26 26 28;
   --card-foreground: 254 254 254;
-  --popover: 24 24 26;
+  --popover: 26 26 28;
   --popover-foreground: 254 254 254;
   --primary-foreground: 23 23 25;
-  --secondary: 39 39 42;
+  --secondary: 30 30 32;
   --secondary-foreground: 254 254 254;
-  --muted: 39 39 42;
-  --muted-foreground: 161 161 170;
-  --accent: 39 39 42;
+  --muted: 30 30 32;
+  --muted-foreground: 115 115 115;
+  --accent: 30 30 32;
   --accent-foreground: 254 254 254;
-  --destructive: 239 68 68;
+  --destructive: 224 82 82;
   --destructive-foreground: 254 254 254;
-  --border: 39 39 42;
-  --input: 39 39 42;
+  --border: 40 40 42;
+  --input: 30 30 32;
   --ring: 156 255 1;
   --radius: 0.5rem;
 }
@@ -35,6 +63,21 @@
   --color-foreground: var(--foreground);
   --color-black-primary: var(--black);
   --color-white-primary: var(--white);
+
+  /* Design system tokens */
+  --color-bg-base: var(--bg-base);
+  --color-bg-sidebar: var(--bg-sidebar);
+  --color-bg-card: var(--bg-card);
+  --color-bg-panel: var(--bg-panel);
+  --color-bg-column: var(--bg-column);
+  --color-border-color: var(--border-color);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-priority-high: var(--priority-high);
+  --color-priority-medium: var(--priority-medium);
+  --color-priority-low: var(--priority-low);
 
   /* shadcn/ui color mappings */
   --color-card: rgb(var(--card));

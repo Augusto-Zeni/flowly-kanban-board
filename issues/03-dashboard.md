@@ -34,20 +34,20 @@ Esta issue também cobre a configuração do design system (CSS tokens globais) 
 
 ## Acceptance criteria
 
-- [ ] CSS tokens do DESIGN.md definidos em `globals.css` (substituem os tokens anteriores)
-- [ ] `<TagBadge />` renderiza pílula com fundo `rgba(cor, 0.25)` e texto correspondente
-- [ ] `<PriorityBadge />` renderiza bullet colorido + label (High / Medium / Low) com cores de prioridade
-- [ ] `<Avatar />` renderiza círculo 24px com imagem ou fallback de iniciais
-- [ ] `<Sidebar />` renderiza todas as seções (GENERAL, PROJECTS, OTHER) e rodapé de usuário
-- [ ] Sidebar recolhe para ícones em telas < 1200px
-- [ ] Rota `/dashboard` protegida — redireciona para `/` se não autenticado
-- [ ] Lista todos os boards com membership ACTIVE do usuário
-- [ ] Card de board exibe nome, descrição, contagem de membros e `updatedAt`
-- [ ] Criar board: Server Action valida sessão + Zod, retorna `{ success, data }` ou `{ success, error }`
-- [ ] Ao criar board, criador recebe BoardMembership OWNER/ACTIVE na mesma transaction
-- [ ] Deletar board: disponível apenas para OWNER, com confirmação
-- [ ] Deletar board cascateia corretamente (colunas, cards, memberships)
-- [ ] UI em português do Brasil, tema escuro com tokens do DESIGN.md
+- [x] CSS tokens do DESIGN.md definidos em `globals.css` (substituem os tokens anteriores)
+- [x] `<TagBadge />` renderiza pílula com fundo `rgba(cor, 0.25)` e texto correspondente
+- [x] `<PriorityBadge />` renderiza bullet colorido + label (High / Medium / Low) com cores de prioridade
+- [x] `<Avatar />` renderiza círculo 24px com imagem ou fallback de iniciais
+- [x] `<Sidebar />` renderiza todas as seções (GENERAL, PROJECTS, OTHER) e rodapé de usuário
+- [x] Sidebar recolhe para ícones em telas < 1200px
+- [x] Rota `/dashboard` protegida — redireciona para `/` se não autenticado
+- [x] Lista todos os boards com membership ACTIVE do usuário
+- [x] Card de board exibe nome, descrição, contagem de membros e `updatedAt`
+- [x] Criar board: Server Action valida sessão + Zod, retorna `{ success, data }` ou `{ success, error }`
+- [x] Ao criar board, criador recebe BoardMembership OWNER/ACTIVE na mesma transaction
+- [x] Deletar board: disponível apenas para OWNER, com confirmação
+- [x] Deletar board cascateia corretamente (colunas, cards, memberships)
+- [x] UI em português do Brasil, tema escuro com tokens do DESIGN.md
 
 ## Blocked by
 
