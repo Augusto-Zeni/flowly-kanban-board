@@ -227,7 +227,7 @@ export default function Page() {
           <div className="hero-animate flex flex-wrap items-center gap-4 mt-8 md:mt-10">
             {session
               ? (
-                  <Link href="/dashboard">
+                  <Link href="/my-boards">
                     <Button id="start-free-button" variant="primary" className="text-sm">
                       Acessar meus quadros
                     </Button>
@@ -587,7 +587,7 @@ export default function Page() {
           </p>
           {session
             ? (
-                <Link href="/dashboard">
+                <Link href="/my-boards">
                   <Button id="cta-start-free" variant="primary" className="text-base px-10 py-3">
                     Acessar meus quadros
                   </Button>

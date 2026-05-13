@@ -43,7 +43,7 @@ export default function Header() {
 
       {session
         ? (
-            <Link href="/dashboard">
+            <Link href="/my-boards">
               <Button id="start-free-button" variant="primary" className="hidden md:block">
                 Acessar meus quadros
               </Button>
@@ -127,7 +127,7 @@ export default function Header() {
 
         {session
           ? (
-              <Link href="/dashboard" onClick={closeMenu}>
+              <Link href="/my-boards" onClick={closeMenu}>
                 <Button id="start-free-button-mobile" variant="primary" className="w-full">
                   Acessar meus quadros
                 </Button>
